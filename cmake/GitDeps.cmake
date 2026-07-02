@@ -1,6 +1,6 @@
 # Copyright (c) 2026 Klaus Reimer
 # SPDX-License-Identifier: MIT
-# Version: 1.1.0
+# Version: 1.2.0
 # Source: https://github.com/kaycxx/cmake-git-deps
 
 if(COMMAND git_require)
