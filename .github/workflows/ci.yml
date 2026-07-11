@@ -11,12 +11,12 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential cmake git libgtest-dev
+          sudo apt-get install -y build-essential cmake git
       - name: Configure project
-        run: cmake -S . -B build
+        run: cmake -B build
       - name: Build project
         run: cmake --build build
       - name: Run tests
-        run: cmake --build build --target test
+        run: FORCE_COLOR=1 cmake --build build --target test
       - name: Install project
         run: cmake --install build --prefix /tmp/root

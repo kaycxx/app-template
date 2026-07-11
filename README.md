@@ -15,7 +15,7 @@ The app prints the sum of the two arguments.
 ## Build From Source
 
 ```sh
-cmake -S . -B build
+cmake -B build
 cmake --build build
 ```
 

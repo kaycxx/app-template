@@ -21,7 +21,7 @@ set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 
-git_require(kaycxx::library-template v1.1.0)
+git_require(kaycxx::library-template 1.2.0)
 
 file(GLOB_RECURSE MAIN_SOURCES CONFIGURE_DEPENDS
     src/*.cpp
@@ -49,7 +49,7 @@ target_link_libraries(${NAME} PRIVATE
 )
 
 include(cmake/Sandbox.cmake)
-include(cmake/GTest.cmake)
+include(cmake/Test.cmake)
 
 install(TARGETS ${NAME}
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
