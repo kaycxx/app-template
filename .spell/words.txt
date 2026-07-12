@@ -4,5 +4,6 @@ endfunction
 GTest
 kaycxx
 Reimer
+RTTI
 STREQUAL
 TOUPPER

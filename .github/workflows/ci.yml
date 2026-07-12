@@ -4,19 +4,19 @@ permissions:
   contents: read
 jobs:
   ci:
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential cmake git
+          sudo apt-get install -y build-essential cmake git ninja-build
       - name: Configure project
-        run: cmake -B build
+        run: cmake --preset debug
       - name: Build project
-        run: cmake --build build
+        run: cmake --build --preset debug
       - name: Run tests
-        run: FORCE_COLOR=1 cmake --build build --target test
+        run: FORCE_COLOR=1 cmake --build --preset debug --target test
       - name: Install project
-        run: cmake --install build --prefix /tmp/root
+        run: cmake --install build/debug --prefix /tmp/root

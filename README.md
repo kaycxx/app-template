@@ -4,6 +4,12 @@ C++ app template.
 
 [GitHub]
 
+## Requirements
+
+- C++23 compiler and standard library
+- Exception support
+- Run-time type information (RTTI)
+
 ## Usage
 
 ```sh
