@@ -1,4 +1,5 @@
 BINDIR
+ctest
 endforeach
 endfunction
 GTest
